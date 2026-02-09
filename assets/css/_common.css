@@ -1,0 +1,251 @@
+:root {
+	--white: #fff;
+	--dark: #000000;
+	--blue100: #F5F5FF;
+	--blue200: #E6E6FF;
+	--blue300: #3638FC;
+	--blue400: #0305C9;
+	--blue500: #020381;
+	--blue600: #020264;
+	--blue700: #01013C;
+	--blue800: #010128;
+	--blue900: #000014;
+	--green100: #F3FCFF;
+	--green200: #DDE8FB;
+	--green300: #8AD7F7;
+	--green400: #56C4F1;
+	--green500: #1EA5DB;
+	--green600: #1489B8;
+	--green700: #054761;
+	--green800: #012432;
+	--green900: #011219;
+	--grey100: #F9F9FB;
+	--grey200: #F0F0F4;
+	--grey300: #DFDFE7;
+	--grey400: #C7C7D1;
+	--grey500: #A4A4A8;
+	--grey600: #7D7D82;
+	--grey700: #58585A;
+	--grey800: #323234;
+	--grey900: #141415;
+	--white100: rgba(255, 255, 255, 0.1);
+	--white200: rgba(255, 255, 255, 0.2);
+	--white300: rgba(255, 255, 255, 0.3);
+	--white400: rgba(255, 255, 255, 0.4);
+	--white500: rgba(255, 255, 255, 0.5);
+	--white600: rgba(255, 255, 255, 0.6);
+	--white700: rgba(255, 255, 255, 0.7);
+	--white800: rgba(255, 255, 255, 0.8);
+	--white900: rgba(255, 255, 255, 0.9);
+	--badge-active: #1EA477;
+	--inprogress-text: #365EFF;
+	--inprogress-bg: #EBEFFE;
+	--inprogress-border: rgba(39, 96, 255, 0.30);
+	--critical-text: #FF4E3E;
+	--critical-bg: #FEEDEB;
+	--critical-border: rgba(255, 78, 62, 0.30);
+	--moderate-text: #FF9C12; 
+	--moderate-bg: #FEF6EB;
+	--moderate-border: rgba(255, 156, 18, 0.30);
+	--completed-text: #1EA477;
+	--completed-bg: #EBFEF8;
+	--completed-border: rgba(30, 164, 119, 0.30);
+	--issue-text: #FF853E;
+	--issue-bg: #FEF2EB;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--gray-100);
+	font-family: "Roboto", sans-serif;
+}
+
+
+.profile-right{
+	transition: all 0.5s;
+}
+.sec-menu-expand .logo,
+.sec-menu-expand .left-sidebar-menu-text,
+.sec-menu-expand .profile-right{
+	display: none;
+}
+
+.sec-menu-expand .left-sidebar{
+	width: 5%;
+}
+.sec-menu-expand.main-section{
+	padding-left: 5%;
+}
+
+.sec-menu-expand .left-sidebar-menu ul li a{
+	justify-content: center;
+}
+
+.main-section {
+	display: flex;
+	padding-left: 17%;
+	transition: all 0.5s;
+
+}
+
+.left-sidebar {
+	width: 17%;
+	position: fixed;
+	left: 0;
+	transition: all 0.5s;
+}
+
+.right-sidebar {
+	width: 100%;
+}
+
+.left-sidebar-inner {
+	background-color: var(--white);
+	padding: 24px 24px;
+	position: relative;
+	height: 100vh;
+	padding-bottom: 100px;
+	overflow-y: auto;
+}
+
+
+.right-sidebar-inner{
+	padding: 24px 24px 24px 16px;
+}
+
+.logo-wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 24px;
+	position: relative;
+}
+
+.logo-wrapper:before{
+	content: '';
+	position: absolute;
+	left: -24px;
+	right: -24px;
+	bottom: 0;
+	height: 1px;
+	background-color: var(--grey200);
+}
+
+.logo a {
+	display: inline-block;
+}
+
+.left-sidebar-menu {
+	padding-top: 24px;
+}
+
+.left-sidebar-menu-title {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color: var(--grey500);
+	padding-bottom: 20px;
+}
+
+.left-sidebar-menu  ul{
+	list-style: none;
+	padding: 0;
+}
+.left-sidebar-menu  ul li{
+	padding-bottom: 4px;
+}
+.left-sidebar-menu  ul li a{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	padding: 14px 10px;
+	transition: all 0.5s;
+	border-radius: 8px;
+}
+.left-sidebar-menu  ul li a:hover,
+.left-sidebar-menu  ul li.active a{
+	background-color: #F0F0FF;
+}
+.left-sidebar-menu  ul li a:hover svg path,
+.left-sidebar-menu  ul li.active a svg path{
+	fill: #020381;
+}
+.left-sidebar-menu  ul li a i{
+	display: inline-block;
+	line-height: 0.5;
+}
+.left-sidebar-menu  ul li a svg,
+.left-sidebar-menu  ul li a svg path{
+	transition: all 0.5s;
+}
+.left-sidebar-menu-text{
+	line-height: 20px;
+	color: var(--grey900);
+	text-transform: capitalize;
+}
+
+.left-sidebar-menu-text .number{
+	padding: 2px 2px;
+	background-color: #3638FF;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--white);
+	min-height: 20px;
+	min-width: 20px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sec-menu-expand .profile{
+	width: 5%;
+}
+
+.profile{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 17%;
+	transition: all 0.5s;
+}
+.profile-inner{
+	padding: 24px 24px;
+	display: flex;
+	gap: 16px;
+	position: relative;
+	background-color: var(--white);
+}
+.profile-inner:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: var(--grey200);
+}
+.profile-left img{
+	border-radius: 100%;
+}
+.profile-name{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	color: #000;
+
+}
+.profile-designation{
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--grey500);
+}
+
